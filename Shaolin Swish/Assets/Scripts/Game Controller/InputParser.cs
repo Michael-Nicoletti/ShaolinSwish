@@ -74,4 +74,80 @@ public static class InputParser {
 		return 0;
 	}
 
+
+	public static bool GetMenuNext()
+	{
+		if (pause)
+		{
+			return false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.Space)) 
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	public static bool GetMenuUp()
+	{
+		if (pause)
+		{
+			return false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) 
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	public static bool GetMenuDown()
+	{
+		if (pause)
+		{
+			return false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) 
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	public static bool GetMenuLeft()
+	{
+		if (pause)
+		{
+			return false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow)) 
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	public static bool GetMenuRight()
+	{
+		if (pause)
+		{
+			return false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown (KeyCode.RightArrow)) 
+		{
+			return true;
+		}
+
+		return false;
+	}
+
 }

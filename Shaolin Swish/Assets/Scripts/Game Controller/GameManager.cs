@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-
+	
 	//Public bools
 	private bool inMenu = false;
 
@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour {
 
 	private GameObject playerOne;
 	private GameObject playerTwo;
-
 
 	// Use this for initialization
 	void Start () {
