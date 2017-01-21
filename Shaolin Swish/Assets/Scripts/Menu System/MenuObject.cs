@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuObject : MonoBehaviour {
 
 	public bool selected = false;
+	public bool activateWithNext = false;
+	public bool needsCooldown = true;
 
 	public MenuObject up;
 	public MenuObject down;
@@ -13,11 +16,8 @@ public class MenuObject : MonoBehaviour {
 
 	public Vector3 CamPos;
 
-	public bool needsCooldown = true;
-
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -30,6 +30,12 @@ public class MenuObject : MonoBehaviour {
 
 		if (InputParser.GetMenuNext ())
 		{
+			if (activateWithNext) 
+			{
+				Activate ();
+				return;
+			}
+
 			if (next && selected) {
 				if(needsCooldown)
 					StartCoroutine (MenuCooldown ());
@@ -91,5 +97,13 @@ public class MenuObject : MonoBehaviour {
 		InputParser.pause = true;
 		yield return new WaitForSeconds (0.1f);
 		InputParser.pause = false;
+	}
+
+	private void Activate()
+	{
+		if (this.gameObject.name == "Start Game") {
+			SceneManager.LoadScene ("MainGameplay");
+			
+		}
 	}
 }
