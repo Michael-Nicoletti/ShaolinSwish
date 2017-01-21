@@ -40,12 +40,12 @@ public static class InputParser {
 			return -1;
 		}
 
-		if (Input.GetKeyDown (KeyCode.W))
+		if (Input.GetKeyDown (KeyCode.E))
 		{
 			return 1;
 		}
 
-		if(Input.GetKeyDown(KeyCode.O))
+		if(Input.GetKeyDown(KeyCode.P))
 		{
 			return 2;
 		}
@@ -61,12 +61,12 @@ public static class InputParser {
 			return -1;
 		}
 
-		if (Input.GetKeyDown (KeyCode.E))
+		if (Input.GetKeyDown (KeyCode.W))
 		{
 			return 1;
 		}
 
-		if(Input.GetKeyDown(KeyCode.P))
+		if(Input.GetKeyDown(KeyCode.O))
 		{
 			return 2;
 		}

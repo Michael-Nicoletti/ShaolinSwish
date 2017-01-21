@@ -5,13 +5,17 @@ public class RoundController : MonoBehaviour {
 
 	private GameManager gM;
 	private bool incomingAttack = false;
-	private int typeOfAttack = -1;
+	private int typeOfAttackIncoming = -1;
 
-	private bool tookDamage = false;
+	private bool failedDefend = false;
 
 	private float phaseOneTimer = Mathf.Infinity;
 	private float phaseTwoTimer = Mathf.Infinity;
 	private float phaseThreeTimer = Mathf.Infinity;
+
+
+	public GameObject enemy;
+	public int characterNumber;
 
 	// Use this for initialization
 	void Start () {
@@ -23,12 +27,16 @@ public class RoundController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (phaseOneTimer > 0) {
-			PhaseOne ();
-		} else if (phaseTwoTimer > 0) {
-			PhaseTwo ();
-		} else if (phaseThreeTimer > 0 && tookDamage) {
+		if (failedDefend)
+		{
 			PhaseThree ();
+			return;
+		}
+
+		if (phaseOneTimer > 0 && incomingAttack) {
+			PhaseOne ();
+		} else {
+			PhaseTwo ();
 		}
 
 
@@ -44,34 +52,124 @@ public class RoundController : MonoBehaviour {
 	{
 		if (phaseOneTimer == Mathf.Infinity)
 		{
-			phaseOneTimer = 10;
+			if (gM.getTurnNumber () < 7)
+				phaseOneTimer = 5 - (gM.getTurnNumber () * 0.5f);
+			else
+				phaseOneTimer = 0.5f;
 		}
 
 		if (incomingAttack)
 		{
-			switch (typeOfAttack)
+			switch (typeOfAttackIncoming)
 			{
-
+			case 1:
+				if (gM.GetComponent<PlayerAttack> ().CheckEarthButton ()) {
+					Debug.Log ("Defended");
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					//Success on defend
+				} else if (gM.GetComponent<PlayerAttack> ().CheckFireButton ()) {
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					failedDefend = true;
+				} else if (gM.GetComponent<PlayerAttack> ().CheckWaterButton ()) {
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					failedDefend = true;
+				}
+				break;
+			case 2:
+				if (gM.GetComponent<PlayerAttack> ().CheckFireButton ()) {
+					Debug.Log ("Defended");
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					//Success on defend
+				} else if (gM.GetComponent<PlayerAttack> ().CheckEarthButton ()) {
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					failedDefend = true;
+				} else if (gM.GetComponent<PlayerAttack> ().CheckWaterButton ()) {
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					failedDefend = true;
+				}
+				break;
+			case 3:
+				if (gM.GetComponent<PlayerAttack> ().CheckWaterButton ()) {
+					Debug.Log ("Defended");
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					//Success on defend
+				} else if (gM.GetComponent<PlayerAttack> ().CheckFireButton ()) {
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					failedDefend = true;
+				} else if (gM.GetComponent<PlayerAttack> ().CheckEarthButton ()) {
+					phaseOneTimer = Mathf.Infinity;
+					incomingAttack = false;
+					failedDefend = true;
+				}
+				break;	
 			}
+		}
+
+		if (phaseOneTimer <= 0) 
+		{
+			phaseOneTimer = Mathf.Infinity;
+			incomingAttack = false;
+			failedDefend = true;
 		}
 
 
 		phaseOneTimer -= Time.deltaTime;
 
-		Debug.Log ("Phase One");
+		PrintText.instance.UpdateText("Phase One for: "+this.gameObject.name+ " time left: "+phaseOneTimer);
 	}
 
 	void PhaseTwo()
 	{
-		if (phaseTwoTimer == Mathf.Infinity)
+		if (gM.playerTurn != characterNumber)
 		{
-			phaseTwoTimer = 10;
+			return;
 		}
 
+		if (phaseTwoTimer == Mathf.Infinity)
+		{
+			if(gM.getTurnNumber() < 7)
+				phaseTwoTimer = 5 - (gM.getTurnNumber() * 0.5f);
+			else
+				phaseTwoTimer = 0.5f;
+		}
+
+		if (gM.GetComponent<PlayerAttack> ().CheckWaterButton ()) 
+		{
+			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming(1);
+			phaseTwoTimer = Mathf.Infinity;
+			gM.changeTurn ();
+		}
+		else if (gM.GetComponent<PlayerAttack> ().CheckEarthButton ()) 
+		{
+			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming (2);
+			phaseTwoTimer = Mathf.Infinity;
+			gM.changeTurn ();
+		}
+		else if (gM.GetComponent<PlayerAttack> ().CheckFireButton ()) 
+		{
+			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming (3);
+			phaseTwoTimer 	= Mathf.Infinity;
+			gM.changeTurn ();
+		}
+
+		if (phaseTwoTimer <= 0) 
+		{
+			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming (-1);
+			phaseTwoTimer = Mathf.Infinity;
+			gM.changeTurn ();
+		}
 
 		phaseTwoTimer -= Time.deltaTime;
 
-		Debug.Log ("Phase Two");
+		PrintText.instance.UpdateText ("Phase Two for: "+this.gameObject.name+ " time left: "+phaseTwoTimer);
 		
 	}
 
@@ -82,40 +180,44 @@ public class RoundController : MonoBehaviour {
 			phaseThreeTimer = 10;
 		}
 
+		calculateDamage ();
+		gM.ResetTurnNumber ();
 
 		phaseThreeTimer -= Time.deltaTime;
 
-		Debug.Log ("Phase Three");
+		PrintText.instance.UpdateText("Phase Three for: "+this.gameObject.name+ " time left: "+phaseThreeTimer);
+		failedDefend = false;
 	}
-
-
-
-	void CheckPhases()
-	{
-		//WE HAD AN INCOMING ATTACK! BLOCK IT!
-		if (incomingAttack)
-		{
-			
-		}
-	}
-
 
 	//Simple getters and setters for the attacks so we can defend
 	private int getTypeOfAttack()
 	{
-		return typeOfAttack;
+		return typeOfAttackIncoming;
 	}
 
 
 	/// <summary>
+	/// -1 = player didnt input anything! Go directly to phase two!
 	/// 0 = Water
 	/// 1 = Earth
 	/// 2 = Fire
 	/// </summary>
 	/// <param name="attack">Attack.</param>
-	public void setTypeOfAttack(int attack)
+	public void setTypeOfAttackIncoming(int attack)
 	{
-		typeOfAttack = attack;
+		if (attack == -1) 
+		{
+			gM.ResetTurnNumber ();
+			return;
+		}
+
+		Debug.Log ("Attack");
+		typeOfAttackIncoming = attack;
 		incomingAttack = true;
+	}
+
+	void calculateDamage()
+	{
+		enemy.GetComponent<PlayerStats> ().health -= 10;
 	}
 }

@@ -15,98 +15,122 @@ public class PlayerAttack : MonoBehaviour {
 	// Currently checks player input for types of attacks
 	void Update () {
 
-		CheckWaterButton ();
+		//CheckWaterButton ();
 
-		CheckEarthButton ();	
+		//CheckEarthButton ();	
 
-		CheckFireButton ();
+		//CheckFireButton ();
 	}
 
 
 	// ----- BUTTON CHECKS ----- //
-	void CheckWaterButton()
+	public bool CheckWaterButton()
 	{
 		switch (InputParser.GetWaterButton ()) 
 		{
 		case -1:
 			Debug.Log ("WE ARE PAUSED");
+			return false;
 			break;
 
 		case 0:
 			//Debug.Log ("WE DIDNT RETURN ANYTHING");
+			return false;
 			break;
 		case 1:
-			Debug.Log ("Player One Water");
-			if (GameManager.playerTurn == 1)
+			if (gM.playerTurn == 1)
 			{
-				GameManager.getPlayerTwo ().GetComponent<RoundController> ().setTypeOfAttack (0);
+				Debug.Log ("Player One Water");
+				//gM.getPlayerTwo ().GetComponent<RoundController> ().setTypeOfAttackIncoming (0);
+				return true;
 			}
 			break;
 		case 2:
-			Debug.Log ("Player Two Water");
-			if (GameManager.playerTurn == 2)
+			if (gM.playerTurn == 2)
 			{
-				GameManager.getPlayerOne ().GetComponent<RoundController> ().setTypeOfAttack (0);
+				Debug.Log ("Player Two Water");
+				//gM.getPlayerOne ().GetComponent<RoundController> ().setTypeOfAttackIncoming (0);
+				return true;
 			}
 			break;
+
+		default:
+			return false;
 		}
+		return false;
 	}
 		
-	void CheckEarthButton()
+	public bool CheckEarthButton()
 	{
 		switch (InputParser.GetEarthButton ()) 
 		{
 		case -1:
 			Debug.Log ("WE ARE PAUSED");
+			return false;
 			break;
 
 		case 0:
 			//Debug.Log ("WE DIDNT RETURN ANYTHING");
+			return false;
 			break;
 		case 1:
 			Debug.Log ("Player One Earth");
-			if (GameManager.playerTurn == 1)
+			if (gM.playerTurn == 1)
 			{
-				GameManager.getPlayerTwo ().GetComponent<RoundController> ().setTypeOfAttack (1);
+				//gM.getPlayerTwo ().GetComponent<RoundController> ().setTypeOfAttackIncoming (1);
+				return true;
 			}
 			break;
 		case 2:
 			Debug.Log ("Player Two Earth");
-			if (GameManager.playerTurn == 2)
+			if (gM.playerTurn == 2)
 			{
-				GameManager.getPlayerOne ().GetComponent<RoundController> ().setTypeOfAttack (1);
+				//gM.getPlayerOne ().GetComponent<RoundController> ().setTypeOfAttackIncoming (1);
+				return true;
 			}
 			break;
+
+		default:
+			return false;
 		}
+		return false;
 	}
 
 
-	void CheckFireButton()
+	public bool CheckFireButton()
 	{
 		switch (InputParser.GetFireButton ()) 
 		{
 		case -1:
 			Debug.Log ("WE ARE PAUSED");
+			return false;
 			break;
 
 		case 0:
 			//Debug.Log ("WE DIDNT RETURN ANYTHING");
+			return false;
 			break;
 		case 1:
 			Debug.Log ("Player One Fire");
-			if (GameManager.playerTurn == 1)
+			if (gM.playerTurn == 1)
 			{
-				GameManager.getPlayerTwo ().GetComponent<RoundController> ().setTypeOfAttack (2);
+				//gM.getPlayerTwo ().GetComponent<RoundController> ().setTypeOfAttackIncoming (2);
+				return true;
 			}
 			break;
 		case 2:
 			Debug.Log ("Player Two Fire");
-			if (GameManager.playerTurn == 2)
+			if (gM.playerTurn == 2)
 			{
-				GameManager.getPlayerOne ().GetComponent<RoundController> ().setTypeOfAttack (2);
+				//gM.getPlayerOne ().GetComponent<RoundController> ().setTypeOfAttackIncoming (2);
+				return true;
 			}
 			break;
+
+		default:
+			return false;
 		}
+		return false;
 	}
 
 	// ----- BUTTON CHECKS ----- //
