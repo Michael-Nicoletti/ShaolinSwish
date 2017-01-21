@@ -8,13 +8,15 @@ public class MenuObject : MonoBehaviour {
 	public bool activateWithNext = false;
 	public bool needsCooldown = true;
 
+	public string levelToLoad;
+
 	public MenuObject up;
 	public MenuObject down;
 	public MenuObject left;
 	public MenuObject right;
 	public MenuObject next;
 
-	public Vector3 CamPos;
+	public Vector3 CamPos = new Vector3 (0, 0, -10);
 
 	// Use this for initialization
 	void Start () {
@@ -23,14 +25,19 @@ public class MenuObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-//		if (selected)
-//		{
-//			Debug.Log(gameObject.name+ " is selected");
-//		}
+		if (selected) {
+			if (GetComponent<TextMesh> ()) {
+				GetComponent<TextMesh> ().color = Color.yellow;
+			}
+		} else {
+			if (GetComponent<TextMesh> ()) {
+				GetComponent<TextMesh> ().color = Color.white;
+			}
+		}
 
 		if (InputParser.GetMenuNext ())
 		{
-			if (activateWithNext) 
+			if (activateWithNext && selected) 
 			{
 				Activate ();
 				return;
@@ -101,9 +108,11 @@ public class MenuObject : MonoBehaviour {
 
 	private void Activate()
 	{
-		if (this.gameObject.name == "Start Game") {
-			SceneManager.LoadScene ("MainGameplay");
-			
-		}
+//		if (this.gameObject.name == "Start Game") {
+//			SceneManager.LoadScene ("MainGameplay");
+//			
+//		}
+
+		SceneManager.LoadScene (levelToLoad);
 	}
 }

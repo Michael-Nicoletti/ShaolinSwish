@@ -16,8 +16,13 @@ public class GameManager : MonoBehaviour {
 	private GameObject playerOne;
 	private GameObject playerTwo;
 
+
+	private PlayerStats[] playerStats;
+
 	// Use this for initialization
 	void Start () {
+
+		playerStats = new PlayerStats[2];
 
 		instance = this;
 
@@ -67,6 +72,27 @@ public class GameManager : MonoBehaviour {
 
 	public void ResetTurnNumber()
 	{
+		turnNumber = 0;
+	}
+
+	public void syncPlayerStats()
+	{
+		playerStats [0] = playerOne.GetComponent<PlayerStats> ();
+		playerStats [1] = playerTwo.GetComponent<PlayerStats> ();
+	}
+
+	/// <summary>
+	/// Anything that isnt 0 or 1 is null and will break the hell out of the game/// </summary>
+	/// <returns>The player stats.</returns>
+	/// <param name="playerNum">Player number.</param>
+	public PlayerStats getPlayerStats(int playerNum)
+	{
+		return playerStats [playerNum];
+	}
+
+	public void resetGame()
+	{
+		playerTurn = 1;
 		turnNumber = 0;
 	}
 }

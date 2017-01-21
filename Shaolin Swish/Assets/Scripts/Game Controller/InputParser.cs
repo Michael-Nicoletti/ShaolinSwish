@@ -82,7 +82,7 @@ public static class InputParser {
 			return false;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.Space)) 
+		if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) 
 		{
 			return true;
 		}

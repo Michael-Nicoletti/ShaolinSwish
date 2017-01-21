@@ -144,18 +144,21 @@ public class RoundController : MonoBehaviour {
 		if (gM.GetComponent<PlayerAttack> ().CheckWaterButton ()) 
 		{
 			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming(1);
+			GetComponent<PlayerStats> ().updateStats (false, 0);
 			phaseTwoTimer = Mathf.Infinity;
 			gM.changeTurn ();
 		}
 		else if (gM.GetComponent<PlayerAttack> ().CheckEarthButton ()) 
 		{
 			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming (2);
+			GetComponent<PlayerStats> ().updateStats (false, 1);
 			phaseTwoTimer = Mathf.Infinity;
 			gM.changeTurn ();
 		}
 		else if (gM.GetComponent<PlayerAttack> ().CheckFireButton ()) 
 		{
 			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming (3);
+			GetComponent<PlayerStats> ().updateStats (false, 2);
 			phaseTwoTimer 	= Mathf.Infinity;
 			gM.changeTurn ();
 		}
@@ -219,5 +222,11 @@ public class RoundController : MonoBehaviour {
 	void calculateDamage()
 	{
 		enemy.GetComponent<PlayerStats> ().health -= 10;
+
+		if (enemy.GetComponent<PlayerStats> ().health <= 0) {
+			GetComponent<PlayerStats> ().wonGame = true;
+		}
+
+		GetComponent<PlayerStats> ().updateStats (true);
 	}
 }
