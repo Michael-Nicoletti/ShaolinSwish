@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
 public class RoundController : MonoBehaviour {
@@ -13,15 +14,18 @@ public class RoundController : MonoBehaviour {
 	private float phaseTwoTimer = Mathf.Infinity;
 	private float phaseThreeTimer = Mathf.Infinity;
 
+	public GameObject waveAttack;
+	public GameObject earthAttack;
+	public GameObject fireAttack;
 
 	public GameObject enemy;
+	public GameObject attackSpawnLocation;
 	public int characterNumber;
 
 	// Use this for initialization
 	void Start () {
 
-		gM = FindObjectOfType<GameManager> ();
-	
+		gM = FindObjectOfType<GameManager> ();	
 	}
 	
 	// Update is called once per frame
@@ -65,6 +69,11 @@ public class RoundController : MonoBehaviour {
 			case 1:
 				if (gM.GetComponent<PlayerAttack> ().CheckEarthButton ()) {
 					Debug.Log ("Defended");
+					if(GameObject.FindGameObjectWithTag("WaterAttack"))
+					{
+						GameObject temp = GameObject.FindGameObjectWithTag ("WaterAttack");
+						Destroy (temp, 0.3f );
+					}
 					phaseOneTimer = Mathf.Infinity;
 					incomingAttack = false;
 					//Success on defend
@@ -144,6 +153,9 @@ public class RoundController : MonoBehaviour {
 		if (gM.GetComponent<PlayerAttack> ().CheckWaterButton ()) 
 		{
 			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming(1);
+			GameObject temp = (GameObject)Instantiate (waveAttack, attackSpawnLocation.transform.position, Quaternion.identity);
+			temp.transform.rotation = attackSpawnLocation.transform.rotation;
+			temp.GetComponent<Animator> ().speed = 1 + (0.4f * gM.getTurnNumber ());
 			GetComponent<PlayerStats> ().updateStats (false, 0);
 			phaseTwoTimer = Mathf.Infinity;
 			gM.changeTurn ();
@@ -151,6 +163,9 @@ public class RoundController : MonoBehaviour {
 		else if (gM.GetComponent<PlayerAttack> ().CheckEarthButton ()) 
 		{
 			enemy.GetComponent<RoundController>().setTypeOfAttackIncoming (2);
+			GameObject temp = (GameObject)Instantiate (earthAttack, new Vector3 (attackSpawnLocation.transform.position.x, attackSpawnLocation.transform.position.y + 0.2f, attackSpawnLocation.transform.position.z), Quaternion.identity);
+			temp.transform.rotation = new Quaternion(attackSpawnLocation.transform.rotation.x, -90, attackSpawnLocation.transform.rotation.z, attackSpawnLocation.transform.rotation.w);
+			temp.GetComponent<Animator> ().speed = 1 + (0.4f * gM.getTurnNumber ());
 			GetComponent<PlayerStats> ().updateStats (false, 1);
 			phaseTwoTimer = Mathf.Infinity;
 			gM.changeTurn ();
