@@ -1,0 +1,751 @@
+fileFormatVersion: 2
+guid: 6f55e7574cd437240bf414953539ba5f
+timeCreated: 1485044673
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BOT_CURVE
+    100002: Bot_Joint
+    100004: cluster10Handle
+    100006: cluster11Handle
+    100008: cluster12Handle
+    100010: cluster13Handle
+    100012: cluster14Handle
+    100014: cluster15Handle
+    100016: cluster16Handle
+    100018: cluster17Handle
+    100020: cluster18Handle
+    100022: cluster19Handle
+    100024: cluster1Handle
+    100026: cluster20Handle
+    100028: cluster21Handle
+    100030: cluster22Handle
+    100032: cluster23Handle
+    100034: cluster24Handle
+    100036: cluster25Handle
+    100038: cluster26Handle
+    100040: cluster27Handle
+    100042: cluster28Handle
+    100044: cluster29Handle
+    100046: cluster2Handle
+    100048: cluster30Handle
+    100050: cluster31Handle
+    100052: cluster32Handle
+    100054: cluster33Handle
+    100056: cluster34Handle
+    100058: cluster35Handle
+    100060: cluster36Handle
+    100062: cluster37Handle
+    100064: cluster38Handle
+    100066: cluster39Handle
+    100068: cluster3Handle
+    100070: cluster40Handle
+    100072: cluster41Handle
+    100074: cluster42Handle
+    100076: cluster43Handle
+    100078: cluster44Handle
+    100080: cluster45Handle
+    100082: cluster46Handle
+    100084: cluster47Handle
+    100086: cluster48Handle
+    100088: cluster49Handle
+    100090: cluster4Handle
+    100092: cluster50Handle
+    100094: cluster51Handle
+    100096: cluster52Handle
+    100098: cluster53Handle
+    100100: cluster54Handle
+    100102: cluster55Handle
+    100104: cluster56Handle
+    100106: cluster57Handle
+    100108: cluster58Handle
+    100110: cluster59Handle
+    100112: cluster5Handle
+    100114: cluster60Handle
+    100116: cluster61Handle
+    100118: cluster62Handle
+    100120: cluster63Handle
+    100122: cluster64Handle
+    100124: cluster65Handle
+    100126: cluster66Handle
+    100128: cluster67Handle
+    100130: cluster68Handle
+    100132: cluster69Handle
+    100134: cluster6Handle
+    100136: cluster7Handle
+    100138: cluster8Handle
+    100140: cluster9Handle
+    100142: group3
+    100144: ikHandle1
+    100146: ikHandle2
+    100148: ikHandle3
+    100150: joint10
+    100152: joint10 1
+    100154: joint10 2
+    100156: joint11
+    100158: joint11 1
+    100160: joint11 2
+    100162: joint12
+    100164: joint12 1
+    100166: joint12 2
+    100168: joint13
+    100170: joint13 1
+    100172: joint13 2
+    100174: joint14
+    100176: joint14 1
+    100178: joint14 2
+    100180: joint15
+    100182: joint15 1
+    100184: joint15 2
+    100186: joint16
+    100188: joint16 1
+    100190: joint16 2
+    100192: joint17
+    100194: joint17 1
+    100196: joint17 2
+    100198: joint18
+    100200: joint18 1
+    100202: joint18 2
+    100204: joint19
+    100206: joint19 1
+    100208: joint19 2
+    100210: joint2
+    100212: joint2 1
+    100214: joint2 2
+    100216: joint20
+    100218: joint20 1
+    100220: joint20 2
+    100222: joint21
+    100224: joint21 1
+    100226: joint21 2
+    100228: joint22
+    100230: joint22 1
+    100232: joint22 2
+    100234: joint23
+    100236: joint23 1
+    100238: joint23 2
+    100240: joint3
+    100242: joint3 1
+    100244: joint3 2
+    100246: joint4
+    100248: joint4 1
+    100250: joint4 2
+    100252: joint5
+    100254: joint5 1
+    100256: joint5 2
+    100258: joint6
+    100260: joint6 1
+    100262: joint6 2
+    100264: joint7
+    100266: joint7 1
+    100268: joint7 2
+    100270: joint8
+    100272: joint8 1
+    100274: joint8 2
+    100276: joint9
+    100278: joint9 1
+    100280: joint9 2
+    100282: Mid_Con
+    100284: MID_CURVE
+    100286: Mid_Joint
+    100288: pPlane1
+    100290: Top_Cons
+    100292: TOP_CURVE
+    100294: Top_Joint
+    100296: //RootNode
+    400000: BOT_CURVE
+    400002: Bot_Joint
+    400004: cluster10Handle
+    400006: cluster11Handle
+    400008: cluster12Handle
+    400010: cluster13Handle
+    400012: cluster14Handle
+    400014: cluster15Handle
+    400016: cluster16Handle
+    400018: cluster17Handle
+    400020: cluster18Handle
+    400022: cluster19Handle
+    400024: cluster1Handle
+    400026: cluster20Handle
+    400028: cluster21Handle
+    400030: cluster22Handle
+    400032: cluster23Handle
+    400034: cluster24Handle
+    400036: cluster25Handle
+    400038: cluster26Handle
+    400040: cluster27Handle
+    400042: cluster28Handle
+    400044: cluster29Handle
+    400046: cluster2Handle
+    400048: cluster30Handle
+    400050: cluster31Handle
+    400052: cluster32Handle
+    400054: cluster33Handle
+    400056: cluster34Handle
+    400058: cluster35Handle
+    400060: cluster36Handle
+    400062: cluster37Handle
+    400064: cluster38Handle
+    400066: cluster39Handle
+    400068: cluster3Handle
+    400070: cluster40Handle
+    400072: cluster41Handle
+    400074: cluster42Handle
+    400076: cluster43Handle
+    400078: cluster44Handle
+    400080: cluster45Handle
+    400082: cluster46Handle
+    400084: cluster47Handle
+    400086: cluster48Handle
+    400088: cluster49Handle
+    400090: cluster4Handle
+    400092: cluster50Handle
+    400094: cluster51Handle
+    400096: cluster52Handle
+    400098: cluster53Handle
+    400100: cluster54Handle
+    400102: cluster55Handle
+    400104: cluster56Handle
+    400106: cluster57Handle
+    400108: cluster58Handle
+    400110: cluster59Handle
+    400112: cluster5Handle
+    400114: cluster60Handle
+    400116: cluster61Handle
+    400118: cluster62Handle
+    400120: cluster63Handle
+    400122: cluster64Handle
+    400124: cluster65Handle
+    400126: cluster66Handle
+    400128: cluster67Handle
+    400130: cluster68Handle
+    400132: cluster69Handle
+    400134: cluster6Handle
+    400136: cluster7Handle
+    400138: cluster8Handle
+    400140: cluster9Handle
+    400142: group3
+    400144: ikHandle1
+    400146: ikHandle2
+    400148: ikHandle3
+    400150: joint10
+    400152: joint10 1
+    400154: joint10 2
+    400156: joint11
+    400158: joint11 1
+    400160: joint11 2
+    400162: joint12
+    400164: joint12 1
+    400166: joint12 2
+    400168: joint13
+    400170: joint13 1
+    400172: joint13 2
+    400174: joint14
+    400176: joint14 1
+    400178: joint14 2
+    400180: joint15
+    400182: joint15 1
+    400184: joint15 2
+    400186: joint16
+    400188: joint16 1
+    400190: joint16 2
+    400192: joint17
+    400194: joint17 1
+    400196: joint17 2
+    400198: joint18
+    400200: joint18 1
+    400202: joint18 2
+    400204: joint19
+    400206: joint19 1
+    400208: joint19 2
+    400210: joint2
+    400212: joint2 1
+    400214: joint2 2
+    400216: joint20
+    400218: joint20 1
+    400220: joint20 2
+    400222: joint21
+    400224: joint21 1
+    400226: joint21 2
+    400228: joint22
+    400230: joint22 1
+    400232: joint22 2
+    400234: joint23
+    400236: joint23 1
+    400238: joint23 2
+    400240: joint3
+    400242: joint3 1
+    400244: joint3 2
+    400246: joint4
+    400248: joint4 1
+    400250: joint4 2
+    400252: joint5
+    400254: joint5 1
+    400256: joint5 2
+    400258: joint6
+    400260: joint6 1
+    400262: joint6 2
+    400264: joint7
+    400266: joint7 1
+    400268: joint7 2
+    400270: joint8
+    400272: joint8 1
+    400274: joint8 2
+    400276: joint9
+    400278: joint9 1
+    400280: joint9 2
+    400282: Mid_Con
+    400284: MID_CURVE
+    400286: Mid_Joint
+    400288: pPlane1
+    400290: Top_Cons
+    400292: TOP_CURVE
+    400294: Top_Joint
+    400296: //RootNode
+    4300000: pPlane1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: pPlane1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 1
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BOT_CURVE
+        weight: 1
+      - path: Bot_Joint
+        weight: 1
+      - path: Bot_Joint/joint2
+        weight: 1
+      - path: Bot_Joint/joint2/joint3
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17/joint18
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22
+        weight: 1
+      - path: Bot_Joint/joint2/joint3/joint4/joint5/joint6/joint7/joint8/joint9/joint10/joint11/joint12/joint13/joint14/joint15/joint16/joint17/joint18/joint19/joint20/joint21/joint22/joint23
+        weight: 1
+      - path: group3
+        weight: 1
+      - path: group3/cluster47Handle
+        weight: 1
+      - path: group3/cluster48Handle
+        weight: 1
+      - path: group3/cluster49Handle
+        weight: 1
+      - path: group3/cluster50Handle
+        weight: 1
+      - path: group3/cluster51Handle
+        weight: 1
+      - path: group3/cluster52Handle
+        weight: 1
+      - path: group3/cluster53Handle
+        weight: 1
+      - path: group3/cluster54Handle
+        weight: 1
+      - path: group3/cluster55Handle
+        weight: 1
+      - path: group3/cluster56Handle
+        weight: 1
+      - path: group3/cluster57Handle
+        weight: 1
+      - path: group3/cluster58Handle
+        weight: 1
+      - path: group3/cluster59Handle
+        weight: 1
+      - path: group3/cluster60Handle
+        weight: 1
+      - path: group3/cluster61Handle
+        weight: 1
+      - path: group3/cluster62Handle
+        weight: 1
+      - path: group3/cluster63Handle
+        weight: 1
+      - path: group3/cluster64Handle
+        weight: 1
+      - path: group3/cluster65Handle
+        weight: 1
+      - path: group3/cluster66Handle
+        weight: 1
+      - path: group3/cluster67Handle
+        weight: 1
+      - path: group3/cluster68Handle
+        weight: 1
+      - path: group3/cluster69Handle
+        weight: 1
+      - path: ikHandle1
+        weight: 1
+      - path: ikHandle2
+        weight: 1
+      - path: ikHandle3
+        weight: 1
+      - path: Mid_Con
+        weight: 1
+      - path: Mid_Con/cluster24Handle
+        weight: 1
+      - path: Mid_Con/cluster25Handle
+        weight: 1
+      - path: Mid_Con/cluster26Handle
+        weight: 1
+      - path: Mid_Con/cluster27Handle
+        weight: 1
+      - path: Mid_Con/cluster28Handle
+        weight: 1
+      - path: Mid_Con/cluster29Handle
+        weight: 1
+      - path: Mid_Con/cluster30Handle
+        weight: 1
+      - path: Mid_Con/cluster31Handle
+        weight: 1
+      - path: Mid_Con/cluster32Handle
+        weight: 1
+      - path: Mid_Con/cluster33Handle
+        weight: 1
+      - path: Mid_Con/cluster34Handle
+        weight: 1
+      - path: Mid_Con/cluster35Handle
+        weight: 1
+      - path: Mid_Con/cluster36Handle
+        weight: 1
+      - path: Mid_Con/cluster37Handle
+        weight: 1
+      - path: Mid_Con/cluster38Handle
+        weight: 1
+      - path: Mid_Con/cluster39Handle
+        weight: 1
+      - path: Mid_Con/cluster40Handle
+        weight: 1
+      - path: Mid_Con/cluster41Handle
+        weight: 1
+      - path: Mid_Con/cluster42Handle
+        weight: 1
+      - path: Mid_Con/cluster43Handle
+        weight: 1
+      - path: Mid_Con/cluster44Handle
+        weight: 1
+      - path: Mid_Con/cluster45Handle
+        weight: 1
+      - path: Mid_Con/cluster46Handle
+        weight: 1
+      - path: MID_CURVE
+        weight: 1
+      - path: Mid_Joint
+        weight: 1
+      - path: Mid_Joint/joint2 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1/joint17 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1/joint17 1/joint18 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1/joint17 1/joint18 1/joint19 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1/joint17 1/joint18 1/joint19 1/joint20 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1/joint17 1/joint18 1/joint19 1/joint20 1/joint21 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1/joint17 1/joint18 1/joint19 1/joint20 1/joint21 1/joint22 1
+        weight: 1
+      - path: Mid_Joint/joint2 1/joint3 1/joint4 1/joint5 1/joint6 1/joint7 1/joint8
+          1/joint9 1/joint10 1/joint11 1/joint12 1/joint13 1/joint14 1/joint15 1/joint16
+          1/joint17 1/joint18 1/joint19 1/joint20 1/joint21 1/joint22 1/joint23 1
+        weight: 1
+      - path: pPlane1
+        weight: 1
+      - path: Top_Cons
+        weight: 1
+      - path: Top_Cons/cluster1Handle
+        weight: 1
+      - path: Top_Cons/cluster2Handle
+        weight: 1
+      - path: Top_Cons/cluster3Handle
+        weight: 1
+      - path: Top_Cons/cluster4Handle
+        weight: 1
+      - path: Top_Cons/cluster5Handle
+        weight: 1
+      - path: Top_Cons/cluster6Handle
+        weight: 1
+      - path: Top_Cons/cluster7Handle
+        weight: 1
+      - path: Top_Cons/cluster8Handle
+        weight: 1
+      - path: Top_Cons/cluster9Handle
+        weight: 1
+      - path: Top_Cons/cluster10Handle
+        weight: 1
+      - path: Top_Cons/cluster11Handle
+        weight: 1
+      - path: Top_Cons/cluster12Handle
+        weight: 1
+      - path: Top_Cons/cluster13Handle
+        weight: 1
+      - path: Top_Cons/cluster14Handle
+        weight: 1
+      - path: Top_Cons/cluster15Handle
+        weight: 1
+      - path: Top_Cons/cluster16Handle
+        weight: 1
+      - path: Top_Cons/cluster17Handle
+        weight: 1
+      - path: Top_Cons/cluster18Handle
+        weight: 1
+      - path: Top_Cons/cluster19Handle
+        weight: 1
+      - path: Top_Cons/cluster20Handle
+        weight: 1
+      - path: Top_Cons/cluster21Handle
+        weight: 1
+      - path: Top_Cons/cluster22Handle
+        weight: 1
+      - path: Top_Cons/cluster23Handle
+        weight: 1
+      - path: TOP_CURVE
+        weight: 1
+      - path: Top_Joint
+        weight: 1
+      - path: Top_Joint/joint2 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2/joint17 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2/joint17 2/joint18 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2/joint17 2/joint18 2/joint19 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2/joint17 2/joint18 2/joint19 2/joint20 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2/joint17 2/joint18 2/joint19 2/joint20 2/joint21 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2/joint17 2/joint18 2/joint19 2/joint20 2/joint21 2/joint22 2
+        weight: 1
+      - path: Top_Joint/joint2 2/joint3 2/joint4 2/joint5 2/joint6 2/joint7 2/joint8
+          2/joint9 2/joint10 2/joint11 2/joint12 2/joint13 2/joint14 2/joint15 2/joint16
+          2/joint17 2/joint18 2/joint19 2/joint20 2/joint21 2/joint22 2/joint23 2
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: cluster46Handle
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

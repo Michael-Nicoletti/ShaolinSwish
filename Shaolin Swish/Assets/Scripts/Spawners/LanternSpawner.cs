@@ -12,6 +12,8 @@ public class LanternSpawner : MonoBehaviour {
 
 	private int lanternCount;
 
+	private bool canSpawnLantern = true;
+
 	// Use this for initialization
 	void Start () {
 
@@ -22,17 +24,30 @@ public class LanternSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (lanternCount < MAX_LANTERNS)
+		if (canSpawnLantern)
 		{
-			GameObject temp;
-
-			temp = (GameObject)Instantiate (LanternObject, this.transform.position, this.transform.rotation);
-
-			lanterns.Add (temp);
-
-			lanternCount++;
-
+			StartCoroutine(SpawnLantern ());
+			canSpawnLantern = false;
 		}
 		
+	}
+
+
+	IEnumerator SpawnLantern()
+	{
+		yield return new WaitForSeconds (2);
+
+		GameObject temp;
+
+		temp = (GameObject)Instantiate (LanternObject, new Vector3(this.gameObject.transform.position.x + (Random.Range(-10, 10)),this.gameObject.transform.position.y,this.gameObject.transform.position.z +(Random.Range(-10, 10))), this.transform.rotation);
+
+		lanterns.Add (temp);
+
+		temp.GetComponent<Rigidbody> ().AddForce (Vector3.up * 100);
+
+		canSpawnLantern = true;
+
+		Destroy (temp, 20);
+	
 	}
 }
