@@ -18,6 +18,11 @@ public class MenuObject : MonoBehaviour {
 
 	public Vector3 CamPos = new Vector3 (0, 0, -10);
 
+	public Sprite activatedSprite;
+	public Sprite deactivatedSprite;
+
+	private bool needToSwapBack;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -26,13 +31,12 @@ public class MenuObject : MonoBehaviour {
 	void Update () {
 
 		if (selected) {
-			if (GetComponent<TextMesh> ()) {
-				GetComponent<TextMesh> ().color = Color.yellow;
-			}
-		} else {
-			if (GetComponent<TextMesh> ()) {
-				GetComponent<TextMesh> ().color = Color.white;
-			}
+			//deactivatedSprite = GetComponent<SpriteRenderer> ().sprite;
+			GetComponent<SpriteRenderer> ().sprite = activatedSprite;
+			needToSwapBack = true;
+		} else if(!selected && needToSwapBack) {
+			GetComponent<SpriteRenderer> ().sprite = deactivatedSprite;
+			needToSwapBack = false;
 		}
 
 		if (InputParser.GetMenuNext ())

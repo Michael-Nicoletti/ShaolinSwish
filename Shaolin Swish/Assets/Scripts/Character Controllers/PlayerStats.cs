@@ -26,10 +26,16 @@ public class PlayerStats : MonoBehaviour {
 	void Update () {
 
 		if (health <= 0) {
-			SceneManager.LoadScene ("MenuRoundCompleted");
-			//@note: Add the death animation and a coroutine to wait for it to end.
+			StartCoroutine (WaitToEndGame ());
+			//@note: I added the death animation but not a coroutine. Whatever.
 		}
 	
+	}
+
+	IEnumerator WaitToEndGame()
+	{
+		yield return new WaitForSeconds (0.5f);
+		SceneManager.LoadScene ("MenuRoundCompleted");
 	}
 
 

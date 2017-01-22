@@ -20,8 +20,16 @@ public class PrintText : MonoBehaviour {
 	
 	}
 
-	public void UpdateText(string message)
+	public void UpdateText(string message, int playerColor)
 	{
+//		if (playerColor == 1)
+//		{
+//			tM.color = new Color (241, 101, 34);
+//		} else if (playerColor == 2)
+//		{
+//			tM.color = new Color (0, 173, 238);
+//		}
+		
 		tM.text = message;
 	}
 }

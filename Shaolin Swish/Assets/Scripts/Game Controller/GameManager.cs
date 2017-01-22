@@ -3,9 +3,6 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 	
-	//Public bools
-	private bool inMenu = false;
-
 	//Private ints
 	public int playerTurn = 1;
 	private int turnNumber = 0;

@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: dbfd7365bf8471140999cacaee15212f
+timeCreated: 1485100746
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ankle_Grp
+    100002: Ankle_Grp 1
+    100004: BE_Hand_L
+    100006: BE_Hand_R
+    100008: BE_Head
+    100010: BE_Thumb_L
+    100012: BE_Thumb_R
+    100014: BE_Toe_L
+    100016: BE_Toe_R
+    100018: BN_Ankle_L
+    100020: BN_Ankle_R
+    100022: BN_Chest
+    100024: BN_Clavicle_L
+    100026: BN_Clavicle_R
+    100028: BN_Elbow_L
+    100030: BN_Elbow_R
+    100032: BN_Foot_L
+    100034: BN_Foot_R
+    100036: BN_Hand_L
+    100038: BN_Hand_R
+    100040: BN_Head
+    100042: BN_Hip_L
+    100044: BN_Hip_R
+    100046: BN_Hips
+    100048: BN_Knee_L
+    100050: BN_Knee_R
+    100052: BN_Neck
+    100054: BN_Root
+    100056: BN_Shoulder_L
+    100058: BN_Shoulder_R
+    100060: BN_Spine_Low
+    100062: BN_Spine_Mid
+    100064: BN_Spine_Upper
+    100066: BN_Tailbone
+    100068: BN_Thumb_L
+    100070: BN_Thumb_R
+    100072: BN_Toe_L
+    100074: BN_Toe_R
+    100076: BN_Wrist_L
+    100078: BN_Wrist_R
+    100080: //RootNode
+    100082: CTRL_Chest
+    100084: CTRL_Elbow_L
+    100086: CTRL_Elbow_R
+    100088: CTRL_Hand_L
+    100090: CTRL_Hand_R
+    100092: CTRL_Hips
+    100094: CTRL_Knee_L
+    100096: CTRL_Knee_R
+    100098: CTRL_Leg_L
+    100100: CTRL_Leg_R
+    100102: CTRL_Master
+    100104: CTRL_Neck
+    100106: CTRL_Shoulder_L
+    100108: CTRL_Shoulder_R
+    100110: CTRL_Spine_Low
+    100112: CTRL_Spine_Mid
+    100114: CTRL_Spine_Upper
+    100116: CTRL_Thumb_L
+    100118: CTRL_Thumb_R
+    100120: CTRL_Wrist_L
+    100122: CTRL_Wrist_R
+    100124: Heel_Pivot
+    100126: Heel_Pivot 1
+    100128: IK_Ball_L
+    100130: IK_Ball_R
+    100132: IK_Knee_L
+    100134: IK_Knee_R
+    100136: IK_Toe_L
+    100138: IK_Toe_R
+    100140: Mesh
+    100142: Toe_Grp
+    100144: Toe_Grp 1
+    100146: Toe_Pivot_L
+    100148: Toe_Pivot_R
+    400000: Ankle_Grp
+    400002: Ankle_Grp 1
+    400004: BE_Hand_L
+    400006: BE_Hand_R
+    400008: BE_Head
+    400010: BE_Thumb_L
+    400012: BE_Thumb_R
+    400014: BE_Toe_L
+    400016: BE_Toe_R
+    400018: BN_Ankle_L
+    400020: BN_Ankle_R
+    400022: BN_Chest
+    400024: BN_Clavicle_L
+    400026: BN_Clavicle_R
+    400028: BN_Elbow_L
+    400030: BN_Elbow_R
+    400032: BN_Foot_L
+    400034: BN_Foot_R
+    400036: BN_Hand_L
+    400038: BN_Hand_R
+    400040: BN_Head
+    400042: BN_Hip_L
+    400044: BN_Hip_R
+    400046: BN_Hips
+    400048: BN_Knee_L
+    400050: BN_Knee_R
+    400052: BN_Neck
+    400054: BN_Root
+    400056: BN_Shoulder_L
+    400058: BN_Shoulder_R
+    400060: BN_Spine_Low
+    400062: BN_Spine_Mid
+    400064: BN_Spine_Upper
+    400066: BN_Tailbone
+    400068: BN_Thumb_L
+    400070: BN_Thumb_R
+    400072: BN_Toe_L
+    400074: BN_Toe_R
+    400076: BN_Wrist_L
+    400078: BN_Wrist_R
+    400080: //RootNode
+    400082: CTRL_Chest
+    400084: CTRL_Elbow_L
+    400086: CTRL_Elbow_R
+    400088: CTRL_Hand_L
+    400090: CTRL_Hand_R
+    400092: CTRL_Hips
+    400094: CTRL_Knee_L
+    400096: CTRL_Knee_R
+    400098: CTRL_Leg_L
+    400100: CTRL_Leg_R
+    400102: CTRL_Master
+    400104: CTRL_Neck
+    400106: CTRL_Shoulder_L
+    400108: CTRL_Shoulder_R
+    400110: CTRL_Spine_Low
+    400112: CTRL_Spine_Mid
+    400114: CTRL_Spine_Upper
+    400116: CTRL_Thumb_L
+    400118: CTRL_Thumb_R
+    400120: CTRL_Wrist_L
+    400122: CTRL_Wrist_R
+    400124: Heel_Pivot
+    400126: Heel_Pivot 1
+    400128: IK_Ball_L
+    400130: IK_Ball_R
+    400132: IK_Knee_L
+    400134: IK_Knee_R
+    400136: IK_Toe_L
+    400138: IK_Toe_R
+    400140: Mesh
+    400142: Toe_Grp
+    400144: Toe_Grp 1
+    400146: Toe_Pivot_L
+    400148: Toe_Pivot_R
+    4300000: Mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 1
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: BN_Root
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

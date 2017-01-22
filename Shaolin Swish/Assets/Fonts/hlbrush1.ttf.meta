@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ad660b8268b477d419ec5990d53ff867
+timeCreated: 1485100253
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HL Brush 1BK
+  fontNames:
+  - HL Brush 1BK
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
